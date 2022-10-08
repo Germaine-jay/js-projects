@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/v4.0.0/line.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title>Profile</title>
+</head>
+<body>
+
+    <div class="profle-header">
+        <div class="profile card">
+            <header>
+                <img src="cat.jpg" alt="" class_image>
+                <div class="details">
+                    <h3 id="user"> <i class="fas fa-user-circle"></i>  Username</h3>
+                    <p id="user1"> <i class="fas fa-user-plus"></i>  First_name  Last_name</p>
+                    <span id="user2"> <i class="fas fa-envelope"></i>  Email Address</span>
+                </div>
+            </header>
+
+            <div class="update">
+                <button type="submit" id="update" class="btn btn-primary">Update profile</button>
+                <div class="update-form card">
+                    <i class="fas fa-times" id="times" onclick="hideMenu()"> cancel</i>
+                    <div class="msg"></div>
+                    <form class="form-input">
+                        <div class="form-control">
+                            <input type="text" name = "name" id="name" placeholder=" Enter firstname" >
+                        </div>
+                        <div class="form-control">
+                            <input type="text" name = "name" id="name2" placeholder=" Enter othername" >
+                        </div>
+                        <div class="form-control">
+                            <input type="email" name="email" id="email" placeholder="Enter Email" >
+                        </div>
+                        <button type="submit" id="updatebtn" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const btn= document.querySelector('#update');
+        const form= document.querySelector('.update-form')
+        const myform= document.querySelector('.form-input')
+        const msg = document.querySelector('.msg');
+        const userdetail = document.querySelector('.details');
+
+        const nameinput = document.querySelector('#name');
+        const othernameinput = document.querySelector('#name2');
+        const emailinput = document.querySelector('#email');
+
+        btn.addEventListener('click', showMenu);
+        myform.addEventListener('submit', onSubmit);
+
+        function showMenu(){
+            form.style.transform = 'scale(1)'
+        }
+        
+        function hideMenu(){
+            form.style.transform = 'scale(0)'
+        }
+        
+        function onSubmit(e){
+            e.preventDefault();
+
+            let h3 = document.getElementById('user').textContent = ""
+            let p = document.getElementById('user1').textContent = ""
+            let p2 = document.getElementById('user2').textContent = ""
+
+            if(nameinput.value === "" || emailinput.value === ""){
+                msg.className = 'error';
+                msg.innerHTML = 'input cant be empty';
+                setTimeout(() => msg.remove(), 1000);
+            }
+            else if (nameinput.value != "" || emailinput.value != "" || othernameinput.value ===""){
+
+                const h3 = document.createElement('h3');
+                const icon = document.createElement('i')
+                icon.className = "fas fa-user-circle"
+                h3.appendChild(icon)
+                h3.appendChild(document.createTextNode(
+                `  ${nameinput.value.toUpperCase()}001`))
+        
+
+                const p = document.createElement('p');
+                const icon2 = document.createElement('i')
+                icon2.className = "fas fa-user-plus"
+                p.appendChild(icon2)
+                p.appendChild(document.createTextNode(
+                `  ${nameinput.value} ${othernameinput.value}`))
+
+                const span = document.createElement('span');
+                const icon3 = document.createElement('i')
+                icon3.className ="fas fa-envelope"
+                span.appendChild(icon3)
+                span.appendChild(document.createTextNode(
+                `  ${emailinput.value}`))
+
+                userdetail.appendChild(h3);
+                userdetail.appendChild(p);
+                userdetail.appendChild(span);
+
+                nameinput.value = '';
+                emailinput.value = '';
+                othernameinput.value = '';
+
+                form.style.transform = 'scale(0)'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+*{
+    margin: 0px;
+    padding:0%;
+    box-sizing:border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: rgb(154, 148, 148);
+    overflow: hidden;
+}
+
+
+.wrapper{
+    background-color: #fff;
+    color:grey;
+    max-width:400px;
+    box-shadow: 0px 3px 10px rgba(19, 18, 18, 0.2);
+    margin: 100px auto;
+    padding: 25px 0px;
+    border-radius: 10px;
+}
+
+
+.task-input{
+    height:52px;
+    padding: 0 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.task-input input{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    border-radius:5px;
+    outline: none;
+    padding:0 20px 0 53px;
+    border: 1px solid rgb(131, 125, 125);
+}
+
+.task-input input::placeholder{
+    color:blue;
+}
+
+.controls{
+    display: flex;
+    padding: 18px 25px;
+    justify-content: space-between;
+    border-bottom:1px solid rgb(180, 175, 175) ;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.controls .button{
+    outline: none;
+    border: none;
+    color:#fff;
+    border-radius: 4px;
+    padding: 7px 13px;
+    background: rgb(161, 14, 14);
+    font-size:13px;
+    margin-bottom: 2px;
+}
+
+.button:hover{
+    transform: scale(0.9);
+}
+
+.button{
+    transition: transform 0.2s ease-in;
+}
+
+.filters span{
+    margin: 0 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.filters span:first-child{
+    margin-left: 0px;
+}
+
+a.active{
+    color: rgb(0, 102, 255);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.task-box{
+    margin: 20px 25px;
+}
+
+.task label{
+    display: flex;
+}
+
+
+.task-box .task{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+    list-style: none;
+}
+
+.task-box .task:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.task label input{
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task .settings{
+    cursor: pointer;
+    position: relative;
+}
+
+.settings .task-menu{
+    position: absolute;
+    padding: 5px 0;
+    right: -5px;
+    left: -65px;
+    z-index: 2;
+    background:#fff;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgb(53, 46, 46);
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.2s ease;
+
+}
+
+.settings:hover .task-menu{
+    transform: scale(1);
+}
+
+.task-menu li{
+    height: 25px;
+    font-size: 16px;
+    margin-bottom:2px;
+    /* padding: 1px 15px; */
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: flex-start;
+}
+
+.task-menu li i{
+    padding-right: 8px;
+}
+
+.task-menu li:hover{
+    background:#ece9e9;
+}
+
+.task-menu li:last-child{
+    margin-bottom: 0;
+}
+
+
+/* navbar */
+.navbar{
+    background-color: rgb(240, 168, 36);
+    height: 50px;
+    color:antiquewhite;
+    position:sticky;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    padding:1em;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+.navbar ul{
+    display:flex;
+}
+
+.navbar a{
+    color:#fff;
+    padding: 8ppx;
+    /* margin: 0px 5px; */
+}
+
+.navbar a:hover{
+    border-bottom: 2px #fff solid;
+    color:antiquewhite;
+}
+
+h4{
+    font-size: 26px;
+    padding-right: 15px;
+}
+
+.flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    overflow: unset;
+    font-size: 16px;
+    padding-top: 10px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/v4.0.0/line.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title>Todo List</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="container flex">
+            <h4 class="logo">Germaine</h4>
+            <ul class="navbar-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Signup</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">ToDo List</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- todo list -->
+    <div class="wrapper">
+        <div class="task-input">
+            <img src="" alt="">
+            <input type="text" placeholder="Add a new Task">
+        </div>
+
+        <div class="controls">
+            <div class="filters">
+                <span class="active"><a href="" class="active">All</a></span>
+                <span><a href="#">Pending</a></span>
+                <span><a href="#">Completed</a></span>
+            </div>
+            <button class="button" href="base.html">
+                <i class="fas fa-trash"></i> Clear all</button>
+        </div>
+
+        <ul class="task-box">
+            <li class="task">
+                <label for="">
+                    <input type="checkbox" id="complete">
+                    <p>Renew gym membership</p>
+                </label>
+                <div class="settings">
+                    <!-- <i class="uil uil-ellipsis-h "></i> -->
+                    <i class="fas fa-ellipsis-h "></i>
+                    <ul class="task-menu">
+                        <li><i class="fas fa-pen"></i>Edit</li>
+                        <li><i class="fas fa-trash"></i>Delete</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="task">
+                <label for="">
+                    <input type="checkbox" id="complete">
+                    <p>Send project file to client</p>
+                </label>
+                <div class="settings">
+                    <i class="fas fa-ellipsis-h "></i>
+                    <ul class="task-menu">
+                        <li><i class="fas fa-pen">Edit</i></li>
+                        <li><i class="fas fa-trash">Delete</i></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="task">
+                <label for="">
+                    <input type="checkbox" id="complete">
+                    <p>Discuss new project ideas</p>
+                </label>
+                <div class="settings">
+                    <i class="fas fa-ellipsis-h "></i>
+                    <ul class="task-menu">
+                        <li><i class="fas fa-pen">Edit</i></li>
+                        <li><i class="fas fa-trash">Delete</i></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+</body>
+</html>
