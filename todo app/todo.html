@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <title>Todo app js</title>
+</head>
+<body>
+    <header class="head">
+        <h1>Todo List</h1>
+        <div class="forms">
+            <form action="" class="search-form">
+                <input type="text" placeholder="Enter task" id="task-search">
+            </form>
+        </div>
+    </header>
+    
+    <section class="container">
+        <h2>Add Task</h2>
+        <div class="form-group">
+            <form action="" id="form-input">
+                <input type="text" placeholder="Enter task" id="task">
+                <input type="submit" placeholder="submit" class="btn btn-primary">
+            </form>
+        </div>
+
+        <div class="list-items">
+            <div class="msg"></div>
+            <h2>Task</h2>
+            <ul id="items">
+                <li class="item">Start Project
+                    <button type="submit" class="btn btn-secondary">X</button>
+                    <button type="submit" class=" btn btn-sm" id="edit">Edit</button>
+                    <button type="submit" class=" btn btn-sb" id="complete">Completed</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script src="todo.js"></script>
+</body>
+</html>
