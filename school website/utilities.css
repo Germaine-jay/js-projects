@@ -1,0 +1,152 @@
+/* @media (max-width:750px){ */
+    /* {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    } */
+
+    /* .header{
+        height: 110%;
+    }
+
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0, 0,0,0.1);
+    }
+} */
+
+.card{
+    background-color:rgb(253, 252, 251);
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(7, 6, 6, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    gap: 20px;
+    justify-content: center;
+    align-items:center  ;
+    height: 70% ;
+    overflow:unset;
+}
+
+
+/* mobile */
+@media (max-width: 700px) {
+
+    .navbar-links ul li{
+        display: block;
+        padding: 15px 0px 15px;
+    }
+
+    .navbar-links{
+        font-size: 15px;
+        background:transparent;
+        height: 50vh;
+        position: absolute;
+        z-index: 2;
+        width: 150px;
+        top: 0px;
+        right: -200px;
+        text-align: left;
+        transition: 1s;
+    }
+
+    .text-box h2, h1{
+        color:rgb(207, 199, 199);
+        font-size: 20px;
+    }
+
+    .text-box p, .front-btn{
+        color:rgb(207, 199, 199);
+        font-size: 10px;
+    }
+
+    #times, #bars{
+        display: block;
+        /* color: antiquewhite; */
+        margin: 0px;
+        font-size: 20px;
+    }    
+    
+    .course img{
+        width: 85%;
+        height: auto;
+    }
+
+    .row{
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .course-col{
+        margin-top: 25px;
+    }
+
+    .facilities{
+        margin-top: 40px;
+    }
+    .facilities-col{
+        margin-top: 20px;
+    }
+
+    .facilities-col img{
+        width: 100%;
+        border-radius:15px;
+    }
+    
+    /* #lib{
+        height: 53%;
+    } */
+}
+
+/* animations */
+@keyframes slideInFromTop{
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+@keyframes slideInFromBottom{
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideInFromRight{
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInFromLeft{
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+@keyframes fade{
+    from {opacity: 0.3;}
+    to {opacity: 1;}
+}
